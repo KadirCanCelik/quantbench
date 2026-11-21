@@ -1,0 +1,34 @@
+models:
+  - name: qwen2.5-0.5b
+    repo: Qwen/Qwen2.5-0.5B
+    revision: "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  - name: qwen2.5-1.5b
+    repo: Qwen/Qwen2.5-1.5B
+    revision: "8faed761d45a263340a0528343f099c05c9a4323"
+  - name: qwen2.5-3b
+    repo: Qwen/Qwen2.5-3B
+    revision: "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b"
+
+variants:
+  - name: fp16
+    backend: hf_fp16
+    format: fp16
+    engine: transformers
+  - name: int8
+    backend: hf_int8
+    format: int8
+    engine: bitsandbytes
+  - name: nf4
+    backend: hf_nf4
+    format: nf4
+    engine: bitsandbytes
+
+run:
+  prompt_file: data/prompt.txt
+  prompt_tokens: 128
+  max_new_tokens: 128
+  warmup_runs: 4
+  timed_runs: 5
+  pause_between_jobs: 15
+  timeout_s: 1200
+  repeats: 3

@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# quantbench
+.tmp/
+models/
+results/
+*.gguf
+*.onnx
+*.safetensors
+.cursor/
+.vscode/
