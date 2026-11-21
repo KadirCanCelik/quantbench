@@ -1,6 +1,15 @@
+<div align="center">
+  
 # quantbench
 
 A benchmarking tool designed to measure **speed (TTFT, tokens/s)**, **VRAM footprint**, and **quality (multi-domain Perplexity)** of Large Language Models across quantization formats on small-VRAM NVIDIA GPUs (focus: ~4 GB).
+
+<br>
+
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![uv](https://img.shields.io/badge/uv-Astral-purple.svg)
+</div>
 
 ---
 
