@@ -41,8 +41,12 @@ Evaluating model perplexity on a single prompt introduces heavy domain bias. `qu
 * **Reasoning:** Step-by-step logic puzzle (`reasoning.txt`)
 * **Factual:** Scientific text (`nature.txt`)
 
-Rather than calculating a naive mean of per-prompt perplexities, overall quality is aggregated via **token-weighted log-likelihood**:
-$$\text{PPL}_{\text{overall}} = \exp\left( -\frac{\sum_{i} \sum_{t} \log P(x_{i,t})}{\sum_{i} N_i} \right)$$
+Rather than calculating a naive mean of per-prompt perplexities, overall quality is aggregated via **token-weighted log-likelihood**:  
+
+```math
+\text{PPL}_{\text{overall}} = \exp\left( -\frac{\sum_{i} \sum_{t} \log P(x_{i,t})}{\sum_{i} N_i} \right)
+```
+
 ---
 
 ### 4. Process Isolation & VRAM Leak Protection
@@ -69,7 +73,8 @@ The orchestrator never touches CUDA in the parent process. Every single `(model,
 
 ## 📊 Benchmark Results
 
-Full campaign output across 3 passes in alternating order (27 runs), rendered directly by `quantbench show`:
+Full campaign output across 3 passes in alternating order (27 runs), rendered directly by `quantbench show`:  
+
 ![quantbench terminal benchmark results](assets/benchmark_result.png)
 
 ---
