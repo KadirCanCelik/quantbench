@@ -80,6 +80,12 @@ The orchestrator never touches CUDA in the parent process. Every single `(model,
 
 ---
 
+## 📖 Articles
+
+**[Evaluating LLM Quantization on 4GB VRAM: A Controlled Benchmark](https://dev.to/kadircancelik/evaluating-llm-quantization-on-4gb-vram-a-controlled-benchmark-548h)**
+
+---
+
 ## 📊 Benchmark Results
 
 Full campaign output across 3 passes in alternating order (27 runs), rendered directly by `quantbench show`:  
